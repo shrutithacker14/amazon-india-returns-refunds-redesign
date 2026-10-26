@@ -109,4 +109,3 @@ git remote add origin https://github.com/shrutithacker14/amazon-india-returns-re
 git push -u origin main
 ```
 
-See [AUDIT_AND_CHANGELOG.md](./AUDIT_AND_CHANGELOG.md) for audit notes and GitHub standardization updates.
