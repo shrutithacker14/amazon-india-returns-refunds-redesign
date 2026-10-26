@@ -1,0 +1,7 @@
+kpi_id,kpi_name,formula_calculation_logic,unit,pre_redesign_synthetic_records,post_redesign_synthetic_records,difference_descriptive,interpretation_limitation
+KPI-01,Average refund turnaround time,Mean(Refund_Turnaround_Hours),Hours,226.98,10.24,Descriptive difference only,Synthetic field; not a measured operational SLA.
+KPI-02,Exchange / wallet retention rate,Requires validated Resolution_Path categories and denominator,Not reported,Not calculated,Not calculated,Not available from current definition,Define included resolution paths before calculating.
+KPI-03,WISMR ticket rate,Count(WISMR_Support_Ticket_Raised = Yes) / all records,Percentage,41.65%,8.71%,Descriptive difference only,Synthetic labels; not a real support-ticket audit.
+KPI-04,Pay on Delivery (PoD / COD) first-attempt payout success,Requires payout attempt outcome field,Not reported,Not available,Not available,Cannot be calculated,Dataset has payment mode but no payout outcome.
+KPI-05,Fraud leakage ratio,Sum(Fraud_Leakage_INR) / Sum(Order_Value_INR),Percentage,7.90%,1.32%,Descriptive difference only,"Denominator is order value, not returned GMV; synthetic values."
+KPI-06,Average customer CSAT,Mean(Customer_CSAT_1to5),Score (1–5),2.32,4.23,Descriptive difference only,Synthetic ratings; not a measured customer survey.

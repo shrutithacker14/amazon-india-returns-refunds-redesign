@@ -1,0 +1,7 @@
+deliverable_or_workstream,lead_business_analyst,vp_of_cx_sponsor,cfo_finance,reverse_logistics_lead,engineering_it_lead,qa_uat_lead
+As-Is Journey Mapping & Return Reason Audit,R,A,I,C,I,I
+Return Eligibility Decision Logic & Business Rules,R,A,C,C,C,C
+Pro-Rata Coupon & Partial Bundle Refund Formula,R,C,A,I,C,C
+Doorstep 4-Point QC Mobile Workflow Design,R,I,I,A,R,C
+Pay on Delivery (PoD / COD)-to-UPI Penny-Drop & Instant Payout Integration,C,I,A,I,R,C
+UAT Scenario Execution & Edge-Case Sign-Off,A,I,C,C,C,R

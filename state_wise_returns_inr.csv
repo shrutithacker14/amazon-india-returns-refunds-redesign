@@ -1,0 +1,17 @@
+customer_state,implementation_phase,total_returns,avg_refund_tat_hours,retained_revenue_inr,fraud_leakage_inr,avg_csat_1to5
+Delhi NCR,Post-Redesign (To-Be),348,9.6,378580,11830,4.25
+Delhi NCR,Pre-Redesign (As-Is),348,228.2,59500,36830,2.36
+Gujarat,Post-Redesign (To-Be),416,11.0,419940,4220,4.19
+Gujarat,Pre-Redesign (As-Is),468,226.8,96940,81300,2.4
+Karnataka,Post-Redesign (To-Be),418,9.5,445430,7740,4.23
+Karnataka,Pre-Redesign (As-Is),412,229.7,85320,77940,2.33
+Maharashtra,Post-Redesign (To-Be),499,10.9,479150,21730,4.22
+Maharashtra,Pre-Redesign (As-Is),500,226.8,109980,76430,2.28
+Rajasthan,Post-Redesign (To-Be),188,10.0,234270,2370,4.27
+Rajasthan,Pre-Redesign (As-Is),212,228.3,53170,40200,2.3
+Tamil Nadu,Post-Redesign (To-Be),279,10.2,330040,9820,4.34
+Tamil Nadu,Pre-Redesign (As-Is),237,227.4,41730,40910,2.21
+Telangana,Post-Redesign (To-Be),184,10.2,185760,7330,4.17
+Telangana,Pre-Redesign (As-Is),182,219.4,25260,7970,2.29
+West Bengal,Post-Redesign (To-Be),147,10.3,156800,0,4.16
+West Bengal,Pre-Redesign (As-Is),162,224.6,32650,29230,2.35

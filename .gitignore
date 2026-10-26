@@ -1,0 +1,12 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~$*.xlsx
+~$*.docx
+
+# Python/cache artifacts (if added later)
+__pycache__/
+*.py[cod]
+.env

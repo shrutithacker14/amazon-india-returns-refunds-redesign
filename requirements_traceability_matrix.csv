@@ -1,0 +1,11 @@
+brd_req_id,requirement_description,business_rule_id,user_story_id,uat_scenario_id,target_kpi_impacted,sign_off_status
+FR-01,Dynamic Category & Return Window Eligibility,"BR-01, BR-02",US-01,"UAT-01, UAT-02, UAT-03",Self-Service Adoption >= 85%,Draft
+FR-02,48-Hour Damaged/Wrong Item Override with Photo,BR-01A,US-02,UAT-04,Customer CSAT >= 4.5 / 5.0,Draft
+FR-03,Exchange-First UI Nudge & 48h Inventory Lock,BR-04,US-03,UAT-05,Exchange Conversion >= 35%,Draft
+FR-04,Instant Amazon Pay Balance Refund with +5% Bonus,BR-04,US-04,UAT-05,Retained Revenue +₹4.8 Cr/yr,Draft
+FR-05,Pay on Delivery (PoD / COD)-to-UPI VPA Penny-Drop Verification,BR-07,US-05,UAT-06,Pay on Delivery (PoD / COD) Refund Success >= 99%,Draft
+FR-06,Real-Time Fraud Risk Scoring (Green vs Red Channel),BR-06,US-07,"UAT-09, UAT-10",Return Fraud Rate < 1.8%,Draft
+FR-07,ATS Rabbit App 4-Point Doorstep QC Checklist,BR-08,US-08,"UAT-09, UAT-11",Doorstep QC Dispute < 2%,Draft
+FR-08,Instant Refund Payout Trigger (<15m Post-Pickup),"BR-06, BR-08",US-09,UAT-09,Avg Refund TAT < 6 Hours,Draft
+FR-09,Pro-Rata Conditional Coupon & Bundle Recalculation,"BR-05, BR-05A",US-06,"UAT-07, UAT-08",Zero Promo Abuse Leakage,Draft
+FR-10,Automated Returnless Refund for <₹299 Defective ASINs,BR-09,US-10,UAT-12,Reverse Logistics Savings ₹,Draft

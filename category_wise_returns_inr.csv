@@ -1,0 +1,11 @@
+product_category,phase,total_returns,total_order_value_inr,avg_refund_tat_hours,wismr_ticket_count,retained_revenue_inr,fraud_leakage_inr,avg_csat_1to5,wismr_ticket_rate_pct
+Apparel,Post-Redesign (To-Be),1070,1615320,9.24,103,949850,27270,4.22,9.63
+Apparel,Pre-Redesign (As-Is),1064,1582480,227.31,448,155370,121310,2.36,42.11
+Beauty & Personal Care,Post-Redesign (To-Be),174,104080,7.27,13,52110,940,4.17,7.47
+Beauty & Personal Care,Pre-Redesign (As-Is),213,125470,234.3,80,7350,8770,2.28,37.56
+Electronics,Post-Redesign (To-Be),336,1518290,19.31,31,664940,22820,4.33,9.23
+Electronics,Pre-Redesign (As-Is),358,1614390,222.45,152,171200,137160,2.28,42.46
+Footwear,Post-Redesign (To-Be),557,1228650,8.58,44,758280,5010,4.19,7.9
+Footwear,Pre-Redesign (As-Is),532,1159390,224.67,211,117360,86820,2.29,39.66
+Home & Kitchen,Post-Redesign (To-Be),342,447810,8.7,25,204790,9000,4.27,7.31
+Home & Kitchen,Pre-Redesign (As-Is),354,466270,229.65,159,53270,36750,2.34,44.92

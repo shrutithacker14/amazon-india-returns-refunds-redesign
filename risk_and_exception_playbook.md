@@ -1,0 +1,40 @@
+# Risk and Exception Playbook
+
+The scenarios below are design considerations for a hypothetical workflow, not implemented controls.
+
+## 1. Pickup quality-check dispute
+**Risk:** a courier rejects a return and the customer disagrees.  
+**Proposed control:** capture a reason code and evidence, show the evidence to the customer where appropriate, and provide an escalation path with a defined review SLA. Define privacy retention and access rules for photos.
+
+## 2. Payment provider or bank outage
+**Risk:** a refund cannot be completed.  
+**Proposed control:** use idempotency keys, retry policies, reconciliation, alerting, and clear refund states. Do not silently switch payout methods or steer customers to a wallet without informed consent. Confirm provider failover behavior with engineering and finance.
+
+## 3. Replacement becomes unavailable
+**Risk:** inventory changes after an exchange is requested.  
+**Proposed control:** define reservation duration, reservation expiry, customer notification, and fallback choices. Make the final policy explicit and test boundary cases.
+
+## 4. Fraud review delays
+**Risk:** risk-based checks delay legitimate refunds.  
+**Proposed control:** define measurable triggers, manual-review SLA, reason codes, access controls, and an appeal process. Monitor false positives as well as losses prevented.
+
+## 5. Promotion recalculation dispute
+**Risk:** partial returns change eligibility for a conditional discount.  
+**Proposed control:** show item-level allocation and refund arithmetic before confirmation; document treatment of seller/platform fault and validate rules with Finance and Legal.
+
+## Validation needed
+All thresholds, timelines, provider names, incentives, and exception rules are assumptions. Validate them with the relevant business, legal, compliance, security, and technical owners.
+
+
+---
+
+## Full Project Risk Register (`risk_register_and_exception_handling.csv`)
+
+| risk_id | risk_category | risk_event_and_root_cause | probability | impact | risk_severity | mitigation_and_prevention_strategy | contingency_fallback_plan | risk_owner | status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| RSK-01 | Fraud & Abuse | Customers exploit 'Instant Doorstep Refund' by handing over used/counterfeit items or empty boxes to hurried couriers. | Medium | High | High | Enforce BR-06 (<=₹5,000 & Return Rate <35% only) + BR-08 mandatory 4-point mobile QC with barcode scan & tag photo. | Auto-block Green Channel for any account with 1 failed FC C-Returns audit; debit ATS Delivery Station / Associate for unverified scans. | Trust & Risk Lead | Mitigated |
+| RSK-02 | Operational | 4-Point Doorstep QC increases courier stop time, causing daily delivery/pickup route delays. | Medium | Medium | Medium | Streamlined mobile UI to 4 binary taps + 1 barcode scan (benchmarked at 65 seconds per stop in pilot). | Disable doorstep photo step during peak Great Indian Festival (GIF) sale days for trusted Tier-1 accounts. | Reverse Logistics Head | Mitigated |
+| RSK-03 | Financial / Promo | Customers game 'Buy X Get Y' or minimum-cart coupons by returning high-margin items and keeping discounted items. | High | Medium | High | Implement BR-05 deterministic Pro-Rata Coupon Recalculation engine shown upfront prior to return confirmation. | Waive promo clawback if customer chooses Store Exchange or Amazon Pay Balance credit. | CFO / Finance Lead | Mitigated |
+| RSK-04 | Technical / Banking | NPCI UPI or IMPS banking network downtime causes Instant Refund or Penny-Drop timeouts. | Medium | Medium | Medium | Asynchronous retry queue with exponential backoff (every 15m for 4 hours) + multi-gateway routing (Amazon Pay UPI + NPCI / Axis-Yes Bank Payout Rails). | Send automated SMS offering 1-click switch to Instant Amazon Pay Balance (+5% bonus) if bank rails are down. | Payment Architect | Mitigated |
+| RSK-05 | Customer Experience | Legitimate customer's return is wrongly rejected at doorstep by an untrained courier agent. | Medium | High | Medium | Require courier to capture clear photo of alleged defect/missing tag before the app allows 'QC Fail' submission. | Customer receives instant 'Contest Rejection' button in app -> Priority L2 Support review within 4 hours. | VP of CX | Mitigated |
+| RSK-06 | Abuse of Policy | Customers systematically order <₹299 items and claim damage to get free 'Returnless Refunds'. | Low | Medium | Low | Enforce BR-09 hard cap of max 1 Returnless Refund per customer/device/address per 365 days + mandatory live camera photo. | Route any 2nd claim on <₹299 items to standard physical pickup. | Product Manager | Mitigated |
